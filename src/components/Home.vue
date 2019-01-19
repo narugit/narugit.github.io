@@ -18,7 +18,7 @@
       </v-flex>
 
       <v-flex xs12 mb-5>
-        <h2 class="headline font-weight-bold mb-3">Ecosystem</h2>
+        <h2 class="headline font-weight-bold mb-3">Ecosystem<font-awesome-icon icon="coffee" /></h2>
 
         <v-layout justify-center>
           <a
