@@ -6,8 +6,8 @@
         <span class="font-weight-light">のページ</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn flat href="https://github.com/vuetifyjs/vuetify/releases/latest" target="_blank">
-        <span class="mr-2">Latest Release</span>
+      <v-btn flat icon>
+        <font-awesome-icon icon="bars" class="fa-2x"/>
       </v-btn>
     </v-toolbar>
 
