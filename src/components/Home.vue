@@ -6,9 +6,9 @@
 			</v-flex>
 
 			<v-flex mb-4>
-				<h1 class="display-2 font-weight-bold mb-3">ホーム</h1>
+				<h1 class="display-2 font-weight-bold mb-3">ホームだよ</h1>
 				<p class="subheading font-weight-regular">
-					グルメが好きです
+					グルメが好きです!!!
 				</p>
 			</v-flex>	
 
