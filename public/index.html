@@ -9,7 +9,20 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Icons">
   </head>
-
+  <script>
+    (function (l) {
+    if (l.search) {
+        var q = {};
+        l.search.slice(1).split('&').forEach(function (v) { // ?p=/fooの分解
+            var a = v.split('='); // 'p=/foo' となっているはずなので=で分割
+            q[a[0]] = a[1]; // {p: '/foo'} 形式に修正
+        });
+        if (q.p !== undefined) {
+            window.history.replaceState(null, null, l.pathname.slice(0, -1) + (q.p || '')); // https://hoge.com/fooへ遷移
+        }
+    }
+  }(window.location))
+  </script>
   <body>
     <noscript>
       <strong>We're sorry but nrk doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
