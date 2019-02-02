@@ -23,8 +23,6 @@
     "@vue/cli-plugin-typescript": "^3.3.0",
     "@vue/cli-service": "^3.3.0",
     "node-sass": "^4.11.0",
-    "pug": "^2.0.3",
-    "pug-plain-loader": "^1.0.0",
     "push-dir": "^0.4.1",
     "sass-loader": "^7.1.0",
     "stylus": "^0.54.5",
