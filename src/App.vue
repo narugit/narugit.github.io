@@ -6,7 +6,7 @@
         <span>NARKEY</span>
         <span class="font-weight-light">のページ</span>
       </v-toolbar-title>
-      <v-toolbar-items class="hidden-sm-and-down">
+      <v-toolbar-items>
         <v-btn flat v-for="item in items" :key="item.title">
           <router-link class='router-txt' :to="'/' + item.title">
             {{ item.title }}

@@ -5,6 +5,7 @@
             "genre": "とんかつ",
             "place": "大阪府",
             "point": "7",
+            "dialog": false,
             "src": "manger/manger.jpg"
         }, 
         {
@@ -12,6 +13,7 @@
             "genre": "居酒屋",
             "place": "大阪府",
             "point": "7",
+            "dialog": false,
             "src": "kabocha/kabocha.jpg"
         },
         {
@@ -19,6 +21,7 @@
             "genre": "ラーメン",
             "place": "東京都",
             "point": "5",
+            "dialog": false,
             "src": "koisaimen/koisaimen.jpg"
         }
     ]

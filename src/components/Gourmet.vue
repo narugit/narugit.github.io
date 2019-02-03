@@ -5,15 +5,64 @@
         <h1>グルメ</h1>
       </v-flex>
     </v-layout>
-    <v-card>
+
+    <!-- ダイアログ -->    
+    <v-flex v-for="item in items.info" :key="item.name">
+      <v-dialog
+        v-model="item.dialog"
+        fullscreen
+        hide-overlay
+        transition="dialog-bottom-transition"
+        scrollable
+      >
+        <v-card tile>
+          <!-- ツールバー部分 -->
+          <v-toolbar app>
+            <v-toolbar-title class="headline text-uppercase pr-3">
+              <span>NARKEY</span>
+              <span class="font-weight-light">のページ</span>
+            </v-toolbar-title>
+            <v-spacer></v-spacer>
+            <v-btn icon @click="item.dialog = false">
+              <v-icon>close</v-icon>
+            </v-btn>
+          </v-toolbar>  
+          <v-container
+            fluid
+            grid-list-md
+          >
+      
+            <v-layout column wrap class="mt-5">
+              <v-flex class="dialog-txt">
+                {{item.name}}
+                <v-card>
+                  <v-img 
+                    :src="require('@/static/images/'+item.src)"
+                    height="600px"
+                  >
+                  </v-img>
+                </v-card>
+                <v-flex class="detail-txt">
+                  場所: {{item.place}}
+                </v-flex>
+                <v-flex class="detail-txt">
+                  ジャンル: {{item.genre}}
+                </v-flex>
+              </v-flex>
+            </v-layout>
+          </v-container>
+          
+        </v-card>
+      </v-dialog>
+    </v-flex>
+    
     <v-container
       fluid
       grid-list-md
     >
-      <v-layout row wrap>
+      <v-layout column wrap>
         <v-flex
           v-for="item in items.info"
-            v-bind="{ [`xs6`]: true }"
             :key="item.name"
         >
           <v-card>
@@ -27,7 +76,7 @@
                 pa-2
               >
                 <v-layout fill-height>
-                  <v-flex xs12 align-end flexbox>
+                  <v-flex align-end flexbox>
                     <span class="headline-txt" v-text="item.name"></span>
                   </v-flex>
                 </v-layout>
@@ -41,7 +90,7 @@
                 {{item.place}}
               </v-flex>
               <v-spacer></v-spacer>
-              <v-btn icon>
+              <v-btn icon @click="item.dialog = true">
                 <font-awesome-icon icon="arrow-right" class="fa-2x"/>
               </v-btn>
             </v-card-actions>
@@ -49,7 +98,6 @@
         </v-flex>
       </v-layout>
     </v-container>
-    </v-card>
 	</v-container>
 </template>
 
@@ -58,6 +106,15 @@
   font-size: 30px;
   color: #fff;
   font-weight: bold;
+}
+
+.dialog-txt{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.detail-txt{
+  font-size: 20px;
 }
 </style>
 
