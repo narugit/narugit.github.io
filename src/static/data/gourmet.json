@@ -4,19 +4,22 @@
             "name": "マンジェ",
             "genre": "とんかつ",
             "place": "大阪府",
-            "point": "7"
+            "point": "7",
+            "src": "manger/manger.jpg"
         }, 
         {
             "name": "かぼちゃの馬車",
             "genre": "居酒屋",
             "place": "大阪府",
-            "point": "7"
+            "point": "7",
+            "src": "kabocha/kabocha.jpg"
         },
         {
             "name": "濃菜麺",
             "genre": "ラーメン",
             "place": "東京都",
-            "point": "5"
+            "point": "5",
+            "src": "koisaimen/koisaimen.jpg"
         }
     ]
 }

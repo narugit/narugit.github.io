@@ -2,10 +2,17 @@
 <v-app>
     <!-- ツールバー -->
     <v-toolbar app>
-      <v-toolbar-title class="headline text-uppercase">
+      <v-toolbar-title class="headline text-uppercase pr-3">
         <span>NARKEY</span>
         <span class="font-weight-light">のページ</span>
       </v-toolbar-title>
+      <v-toolbar-items class="hidden-sm-and-down">
+        <v-btn flat v-for="item in items" :key="item.title">
+          <router-link class='router-txt' :to="'/' + item.title">
+            {{ item.title }}
+          </router-link>      
+        </v-btn>
+      </v-toolbar-items>
       <v-spacer></v-spacer>
       <v-btn flat icon @click.stop="drawer = !drawer">
         <font-awesome-icon icon="bars" class="fa-2x"/>
