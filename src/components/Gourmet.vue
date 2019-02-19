@@ -11,8 +11,8 @@
       <v-dialog
         v-model="item.dialog"
         fullscreen
+        hide-overlay
         transition="dialog-bottom-transition"
-        scrollable
       >
         <v-card tile>
           <!-- ツールバー部分 -->
@@ -29,10 +29,11 @@
             <v-layout column wrap class="mt-5">
               <v-flex class="dialog-txt">
                 {{item.name}}
-                <v-card>
+                <v-card
+                  width="80vw">
                   <v-img 
                     :src="require('@/static/images/'+item.src)"
-                    height="600px"
+                    width="80vw" height="auto"
                   >
                   </v-img>
                 </v-card>
@@ -62,7 +63,8 @@
           <v-card>
             <v-img 
               :src="require('@/static/images/'+item.src)"
-              height="400px"
+              width="83vw"
+              height="auto"
             >
               <v-container
                 fill-height
