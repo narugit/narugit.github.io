@@ -2,10 +2,10 @@
 <v-app>
     <!-- ツールバー -->
     <v-toolbar app>
-      <v-toolbar-title class="headline text-uppercase pr-3">
-        <span>NARKEY</span>
-        <span class="font-weight-light">のページ</span>
-      </v-toolbar-title>
+      <v-btn flat icon @click.stop="drawer = !drawer">
+        <font-awesome-icon icon="bars" class="fa-2x"/>
+      </v-btn>
+      <v-spacer></v-spacer>
       <v-toolbar-items>
         <v-btn flat v-for="item in items" :key="item.title">
           <router-link class='router-txt' :to="'/' + item.title">
@@ -13,18 +13,13 @@
           </router-link>      
         </v-btn>
       </v-toolbar-items>
-      <v-spacer></v-spacer>
-      <v-btn flat icon @click.stop="drawer = !drawer">
-        <font-awesome-icon icon="bars" class="fa-2x"/>
-      </v-btn>
     </v-toolbar>  
     
     <!-- ナビゲーションバー -->
     <v-navigation-drawer 
       v-model="drawer" 
-      absolute 
-      temporary 
-      right>
+      app
+    >
 
       <v-list class="pt-0" dense>
         <v-divider></v-divider>

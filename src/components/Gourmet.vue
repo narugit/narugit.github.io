@@ -11,18 +11,12 @@
       <v-dialog
         v-model="item.dialog"
         fullscreen
-        hide-overlay
         transition="dialog-bottom-transition"
         scrollable
       >
         <v-card tile>
           <!-- ツールバー部分 -->
           <v-toolbar app>
-            <v-toolbar-title class="headline text-uppercase pr-3">
-              <span>NARKEY</span>
-              <span class="font-weight-light">のページ</span>
-            </v-toolbar-title>
-            <v-spacer></v-spacer>
             <v-btn icon @click="item.dialog = false">
               <v-icon>close</v-icon>
             </v-btn>
