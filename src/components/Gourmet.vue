@@ -61,30 +61,24 @@
             :key="item.name"
         >
           <v-card>
+            <div class="headline-txt ml-2">{{item.name}}</div>
+            <v-chip class="genre">
+              {{item.genre}}
+            </v-chip>
+            <v-chip class="place">
+              {{item.place}}
+            </v-chip>
+
             <v-img 
               :src="require('@/static/images/'+item.src)"
+              class="ml-2"
               width="83vw"
               height="auto"
             >
-              <v-container
-                fill-height
-                fluid
-                pa-2
-              >
-                <v-layout fill-height>
-                  <v-flex align-end flexbox>
-                    <span class="headline-txt" v-text="item.name"></span>
-                  </v-flex>
-                </v-layout>
-              </v-container>
+              
             </v-img>
 
             <v-card-actions>
-              <v-flex
-                class="headline"
-              >
-                {{item.place}}
-              </v-flex>
               <v-spacer></v-spacer>
               <v-btn icon @click="item.dialog = true">
                 <font-awesome-icon icon="arrow-right" class="fa-2x"/>
@@ -100,7 +94,6 @@
 <style lang="scss">
 .headline-txt{
   font-size: 30px;
-  color: #fff;
   font-weight: bold;
 }
 
@@ -111,6 +104,16 @@
 
 .detail-txt{
   font-size: 20px;
+}
+
+.v-chip.genre{
+  background: rgba(168, 125, 46, 0.527);
+  font-weight: bold;
+}
+
+.v-chip.place{
+  background: rgba(212, 61, 35, 0.527);
+  font-weight: bold;
 }
 </style>
 

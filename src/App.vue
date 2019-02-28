@@ -18,7 +18,8 @@
     <!-- ナビゲーションバー -->
     <v-navigation-drawer 
       v-model="drawer" 
-      app
+      temporary
+      absolute
     >
 
       <v-list class="pt-0" dense>
