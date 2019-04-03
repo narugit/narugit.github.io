@@ -60,7 +60,7 @@
           v-for="item in items.info"
             :key="item.name"
         >
-          <v-card>
+          <v-card width="80vw"> 
             <div class="headline-txt ml-2">{{item.name}}</div>
             <v-chip class="genre">
               {{item.genre}}
@@ -72,7 +72,7 @@
             <v-img 
               :src="require('@/static/images/'+item.src)"
               class="ml-2"
-              width="83vw"
+              width="75vw"
               height="auto"
             >
               
